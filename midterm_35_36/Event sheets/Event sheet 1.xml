@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Event sheet 1</name>
+    <events>
+        <event-block sid="536065305666797">
+            <conditions>
+                <condition id="0" name="On click" sid="125883807637272" type="Mouse">
+                    <param id="0" name="Mouse button">0</param>
+                    <param id="1" name="Click type">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Spawn another object" sid="202080486147434" type="player">
+                    <param id="0" name="Object">bullet</param>
+                    <param id="1" name="Layer">1</param>
+                    <param id="2" name="Image point">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="275038252530174">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="264628853505539" type="bullet">
+                    <param id="0" name="Object">coin2</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-12" name="Subtract from" sid="637330182279887" type="coin2">
+                    <param id="0" name="Instance variable">Health</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="0" name="Spawn another object" sid="732619710672088" type="bullet">
+                    <param id="0" name="Object">Sprite9</param>
+                    <param id="1" name="Layer">1</param>
+                    <param id="2" name="Image point">0</param>
+                </action>
+                <action id="-9" name="Destroy" sid="370362258798198" type="bullet" />
+            </actions>
+        </event-block>
+        <event-block sid="562062920486161">
+            <conditions />
+            <actions />
+        </event-block>
+        <event-block sid="824133411579155">
+            <conditions>
+                <condition id="-7" name="Compare instance variable" sid="705361411853346" type="coin2">
+                    <param id="0" name="Instance variable">Health</param>
+                    <param id="1" name="Comparison">3</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Spawn another object" sid="582635377884992" type="coin2">
+                    <param id="0" name="Object">Sprite9</param>
+                    <param id="1" name="Layer">1</param>
+                    <param id="2" name="Image point">0</param>
+                </action>
+                <action id="-9" name="Destroy" sid="297075293477125" type="coin2" />
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>
